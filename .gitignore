@@ -1,0 +1,36 @@
+# ============================================================
+# ECHO Research — Public Repo .gitignore
+# Whitelist approach: block everything, allow only what's needed.
+# ============================================================
+
+# Block everything by default
+*
+
+# Allow documentation files
+!*.md
+!*.txt
+!LICENSE
+
+# Allow whitepaper directory and document formats
+!whitepaper/
+!whitepaper/*.docx
+!whitepaper/*.pdf
+
+# Allow architecture docs
+!architecture/
+!architecture/*.md
+
+# Allow notes and media
+!notes/
+!notes/**
+!media/
+!media/**
+
+# Allow git infrastructure
+!.gitignore
+!.gitkeep
+
+# OS artifacts (block even if matched above)
+.DS_Store
+Thumbs.db
+desktop.ini
