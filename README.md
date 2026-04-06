@@ -65,9 +65,13 @@ ECHO's role is that of the gardener: prepare the substrate, observe systematical
 
 The ECHO whitepaper is available in [`whitepaper/`](whitepaper/).
 
-- **v0.1** — Original conceptual framework, detection rationale, and methodology
-- **v0.2** — Expanded 18-detector suite, theory-to-detector mappings, convergent detection methodology, and multi-phase research design
-- **v0.3** — Bayesian meta-analysis (Rethink Priorities framework), three-channel interpretability architecture, updated theoretical gap analysis
+| Version | Format | Description |
+|---------|--------|-------------|
+| **v0.3** | [Markdown](whitepaper/WHITEPAPER.md) ・ [Word](whitepaper/ECHO_Whitepaper_v0.3.docx) | Bayesian meta-analysis (Rethink Priorities framework), three-channel interpretability architecture, updated theoretical gap analysis |
+| v0.2 | [Word](whitepaper/archive/ECHO_Whitepaper_v0.2.docx) | Expanded 18-detector suite, theory-to-detector mappings, convergent detection methodology |
+| v0.1 | [Word](whitepaper/archive/ECHO_Whitepaper_v0.1.docx) | Original conceptual framework, detection rationale, and methodology |
+
+`WHITEPAPER.md` is the canonical, authoritative source. Word exports are provided for offline reading. Prior versions are archived in `whitepaper/archive/`.
 
 It covers:
 - Full framework rationale and philosophy
@@ -117,10 +121,9 @@ echo-research/
 ├── SECURITY.md             ← Security policy and repo scope
 ├── LICENSE                 ← CC BY-NC-ND 4.0
 ├── whitepaper/
-│   ├── WHITEPAPER.md       ← Current version (v0.3, authoritative)
-│   ├── ECHO_Whitepaper_v0.1.docx
-│   ├── ECHO_Whitepaper_v0.2.docx
-│   └── ECHO_Whitepaper_v0.2__public-release.docx
+│   ├── WHITEPAPER.md       ← Canonical source (v0.3)
+│   ├── ECHO_Whitepaper_v0.3.docx  ← Word export
+│   └── archive/            ← Prior versions (v0.1, v0.2)
 ├── architecture/
 │   └── overview.md         ← High-level system design
 ├── notes/                  ← Public research notes (future)

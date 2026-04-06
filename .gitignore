@@ -15,6 +15,9 @@
 !whitepaper/
 !whitepaper/*.docx
 !whitepaper/*.pdf
+!whitepaper/archive/
+!whitepaper/archive/*.docx
+!whitepaper/archive/*.pdf
 
 # Allow architecture docs
 !architecture/
