@@ -117,8 +117,10 @@ echo-research/
 ├── SECURITY.md             ← Security policy and repo scope
 ├── LICENSE                 ← CC BY-NC-ND 4.0
 ├── whitepaper/
+│   ├── WHITEPAPER.md       ← Current version (v0.3, authoritative)
 │   ├── ECHO_Whitepaper_v0.1.docx
-│   └── ECHO_Whitepaper_v0.2.docx
+│   ├── ECHO_Whitepaper_v0.2.docx
+│   └── ECHO_Whitepaper_v0.2__public-release.docx
 ├── architecture/
 │   └── overview.md         ← High-level system design
 ├── notes/                  ← Public research notes (future)
