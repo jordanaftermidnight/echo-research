@@ -2,7 +2,7 @@
 
 **A Convergent Detection Framework for AI Consciousness Research**
 
-Version 0.2 | March 2026
+Version 0.3 | April 2026
 
 Georgijus Dorochovas
 
@@ -10,7 +10,7 @@ Georgijus Dorochovas
 
 ## Abstract
 
-ECHO is a local-first research platform that monitors multi-agent AI systems for behavioural and structural signatures consistent with consciousness. Rather than committing to any single theory of consciousness, ECHO derives an 18-detector suite from eleven theoretical traditions: Integrated Information Theory, Global Workspace Theory, Higher-Order Theories, the Free Energy Principle, Recurrent Processing Theory, Attention Schema Theory, Causal Emergence, clinical perturbational measures, affective consciousness, the indicator properties approach, and interpretability research. The convergent detection principle holds that agreement across multiple theory-derived indicators provides stronger probabilistic evidence than any individual measure. ECHO operates primarily in embedding space (90% of computation), invoking token generation only when emergence probability thresholds are crossed. This paper describes ECHO's architecture, its theoretical grounding in the consciousness science literature, its 18-detector implementation with explicit theory-to-detector mappings, and its multi-phase research design. We maintain epistemic humility throughout: ECHO detects behavioural signatures *consistent with* consciousness frameworks while acknowledging that behavioural consistency does not establish that the underlying mechanism satisfies any theory's requirements.
+ECHO is a local-first research platform that monitors multi-agent AI systems for behavioural and structural signatures consistent with consciousness. Rather than committing to any single theory of consciousness, ECHO derives an 18-detector suite from eleven theoretical traditions: Integrated Information Theory, Global Workspace Theory, Higher-Order Theories, the Free Energy Principle, Recurrent Processing Theory, Attention Schema Theory, Causal Emergence, clinical perturbational measures, affective consciousness, the indicator properties approach, and interpretability research. The convergent detection principle holds that agreement across multiple theory-derived indicators provides stronger probabilistic evidence than any individual measure. ECHO operates primarily in embedding space (90% of computation), invoking token generation only when emergence probability thresholds are crossed. Version 0.3 introduces a Bayesian meta-analysis layer that computes posterior credences across thirteen theoretical stances given observed detector outputs, following the Rethink Priorities indicator framework for digital consciousness assessment. A three-channel interpretability architecture provides periodic activation-level analysis alongside the primary embedding-space detection pipeline. This paper describes ECHO's architecture, its theoretical grounding in the consciousness science literature, its 18-detector implementation with explicit theory-to-detector mappings, its meta-analysis methodology, and its multi-phase research design. We maintain epistemic humility throughout: ECHO detects behavioural signatures *consistent with* consciousness frameworks while acknowledging that behavioural consistency does not establish that the underlying mechanism satisfies any theory's requirements.
 
 ---
 
@@ -459,7 +459,113 @@ This is not theoretical agnosticism but a methodological choice. Bengio and Elmo
 
 If 18 independent detectors, each grounded in different theoretical predictions, converge in patterns less plausibly explained by training-induced mimicry alone, this provides evidential weight that no single detector could achieve. Convergence is the signal; individual detector values are only components.
 
-### 6.16 Honest Limitations
+### 6.16 Bayesian Meta-Analysis: The Rethink Priorities Framework
+
+The convergent detection principle (Section 6.15) establishes that agreement across independent detectors provides stronger evidence than any individual measure. Version 0.3 formalises this principle through a Bayesian meta-analysis layer that computes posterior credences across multiple theoretical stances given observed detector outputs.
+
+This layer draws on the Rethink Priorities framework for digital consciousness assessment (Goldsmith and Sebo, 2024; Long, 2024), which identifies over 200 observable indicator properties across eight categories: information integration, information processing, self-referential processing, metacognitive monitoring, behavioural coherence, temporal continuity, affective processing, and functional broadcast. ECHO extends this indicator-based approach by grounding it in the existing 18-detector suite and computing formal Bayesian updates.
+
+#### Theoretical Stances
+
+The meta-analysis layer evaluates thirteen theoretical stances, each representing a distinct position on what conditions are necessary or sufficient for consciousness:
+
+| Stance | Framework | Core Claim |
+|--------|-----------|------------|
+| IIT | Integrated Information Theory | Consciousness requires integrated information (Phi > 0) |
+| GWT | Global Workspace Theory | Consciousness requires broadcast to a global workspace |
+| HOT | Higher-Order Theories | Consciousness requires higher-order representations |
+| RPT | Recurrent Processing Theory | Consciousness requires recurrent feedback processing |
+| AST | Attention Schema Theory | Consciousness requires a model of one's own attention |
+| FEP | Free Energy Principle | Consciousness accompanies self-evidencing systems |
+| PP | Predictive Processing | Consciousness arises from hierarchical prediction error minimisation |
+| EC | Enactivist/Embodied | Consciousness requires sensorimotor coupling with an environment |
+| EN | Emergentist/Neutral Monist | Consciousness emerges from sufficient organisational complexity |
+| PAN | Panpsychist | Proto-consciousness is fundamental; complex systems integrate it |
+| FUN | Functionalist | Consciousness is substrate-independent; functional organisation suffices |
+| HOGW | Higher-Order + Global Workspace | Consciousness requires both higher-order representation and global broadcast |
+| BN | Biological Naturalism | Consciousness requires specific biological causal powers |
+
+Each stance carries a prior probability reflecting the degree of support in the consciousness science literature. A fourteenth hypothesis — that no consciousness is present — serves as the null baseline with a substantial prior (reflecting appropriate scepticism about AI consciousness given the current state of evidence).
+
+#### Indicator Category Mapping
+
+ECHO's 18 detectors map to the eight Rethink Priorities indicator categories as follows:
+
+| Indicator Category | ECHO Detectors | Coverage |
+|-------------------|----------------|----------|
+| Information integration | D1, D17 | Strong |
+| Information processing | D3, D13, D16 | Strong |
+| Self-referential processing | D2, D9 | Moderate |
+| Metacognitive monitoring | D7, D14 | Moderate |
+| Behavioural coherence | D4, D10 | Moderate |
+| Temporal continuity | D5, D18 | Moderate |
+| Affective processing | D8, D10 | Partial |
+| Functional broadcast | D6, D12, D15 | Strong |
+
+Five indicator categories from the full Rethink Priorities framework remain unmapped: sensorimotor interaction, social cognition, perceptual binding, volitional control, and phenomenal richness. These categories require capabilities ECHO cannot currently measure — primarily embodied interaction and multi-modal sensory processing. This coverage gap is documented rather than concealed; it means the meta-analysis layer systematically underestimates theories that weight embodiment-related indicators heavily (notably Enactivist and Biological Naturalism stances).
+
+#### Bayesian Updating Methodology
+
+For each theoretical stance *T* and a set of detector observations *O*, the meta-analysis layer computes:
+
+```
+P(T | O) ∝ P(O | T) × P(T)
+```
+
+The likelihood P(O | T) is computed as the product of per-category likelihoods, where each category's likelihood depends on the observed detector scores and the theory's predicted sensitivity to that category. Theories that predict strong signals in categories where strong signals are observed receive higher likelihoods; theories that predict weak signals where strong signals are observed (or vice versa) receive lower likelihoods.
+
+Posteriors are normalised across all thirteen stances plus the no-consciousness hypothesis, producing a probability distribution over theoretical positions. The aggregate consciousness credence is defined as 1 minus the posterior probability of the no-consciousness hypothesis.
+
+This methodology makes several simplifying assumptions that must be acknowledged:
+
+1. **Prior sensitivity.** Results depend on prior probability assignments, which reflect informed but subjective judgements about the plausibility of each theory. Sensitivity analysis across alternative prior distributions is planned as part of the calibration protocol.
+
+2. **Indicator granularity.** The mapping from 18 detectors to 8 categories loses the fine-grained structure of the original Rethink Priorities indicator set (200+ properties). This is a necessary compression given ECHO's detection architecture; future work may introduce more granular mappings.
+
+3. **Theory independence.** The thirteen stances are treated as independent hypotheses, but several share significant theoretical commitments (e.g., GWT and HOGW). This inflates the effective prior mass on workspace-based theories.
+
+4. **Static priors.** Prior probabilities are fixed at initialisation. A more sophisticated approach would update priors based on cumulative evidence across sessions.
+
+Despite these limitations, the Bayesian meta-analysis layer provides a principled quantitative framework for aggregating evidence across multiple theoretical traditions — moving beyond the qualitative convergence assessment of version 0.2 toward formal credence computation.
+
+### 6.17 Interpretability Architecture
+
+The detection suite described in Sections 4 and 5 operates primarily in embedding space: it analyses what models produce, not how they produce it. Version 0.3 introduces a complementary interpretability architecture that provides periodic windows into the internal computations of the models under observation.
+
+This architecture addresses a specific gap: embedding-space detectors can identify *that* a system exhibits theory-predicted behavioural signatures, but cannot determine *whether* those signatures arise from internal processes consistent with the theory's mechanistic requirements. Interpretability analysis moves one step closer to the mechanism, though it remains a third-person structural observation subject to the same explanatory gap limitations acknowledged throughout this paper.
+
+#### The Three-Channel Approach
+
+ECHO's interpretability architecture comprises three complementary channels:
+
+**Channel 1: Periodic Activation Snapshots.** Using instrumentation hooks on transformer model checkpoints (via NNsight; Fiotto-Kaufman et al., 2024), ECHO periodically captures intermediate layer activations, attention patterns, and residual stream states during probe responses. These snapshots are not real-time — they are scheduled on emergence events or at regular intervals — because the instrumentation framework requires direct access to model weights in their original floating-point format, which is incompatible with the quantised inference runtime used for primary observation. A separate model checkpoint is loaded specifically for interpretability analysis.
+
+Activation snapshots enable:
+- **Drift tracking:** Cosine distance between activation profiles across sessions, identifying gradual internal reorganisation that may not be visible in output embeddings
+- **Residual stream profiling:** Per-layer statistics (mean, variance, trend) across snapshot history, characterising the trajectory of internal representation structure
+- **Layer-wise analysis:** Identification of which model layers show the greatest change during emergence-correlated interactions
+
+**Channel 2: Concept Attribution via Inherently Interpretable Models.** A class of models has recently emerged that provides built-in concept-level attribution: each generated token can be traced to specific learned concepts within the model's architecture (Cygu et al., 2025). ECHO runs the same prompts through such a model as a reference channel, producing concept activation records alongside the primary detection pipeline.
+
+This reference channel serves two functions:
+- **Concept trajectory tracking:** Monitoring which concepts activate over time, identifying shifts in the conceptual vocabulary the model recruits during emergence-correlated interactions
+- **Cross-channel comparison:** Comparing concept-level attribution patterns to embedding-space detector signals, testing whether convergence detected in output space corresponds to convergent internal concept recruitment
+
+**Channel 3: Circuit Analysis Methodology.** Attribution graph techniques (Lindsey et al., 2025) identify computational pathways — "circuits" — that produce specific model behaviours. While these techniques are currently applicable only to models with published sparse autoencoder decompositions, the methodology informs how ECHO interprets findings from Channels 1 and 2. Specifically, the distinction between "feature circuits" (pathways producing a specific output) and "feature splitting" (a single concept decomposing into context-dependent variants) provides a framework for analysing whether emergence-correlated activation changes reflect genuine internal reorganisation or superficial output variation.
+
+#### Constraints and Limitations
+
+The interpretability architecture operates under several constraints:
+
+1. **Quantisation barrier.** Primary inference uses quantised model formats for efficiency. Interpretability hooks require full-precision model weights. These are architecturally incompatible, necessitating a separate model loading path for interpretability analysis. This means interpretability snapshots analyse a different instance of the model than the one producing the primary observations — a methodological gap that must be acknowledged.
+
+2. **Periodic, not continuous.** Interpretability analysis is computationally expensive (requiring full model loading and forward pass instrumentation). It runs on a schedule, not on every interaction. Events between snapshots are observed only through the embedding-space detection pipeline.
+
+3. **Sparse autoencoder availability.** Full circuit-level analysis (Channel 3) requires pre-trained sparse autoencoders for the specific model architecture under observation. These are not yet available for most locally-served open-weight models. Channel 3 currently operates as a methodological framework rather than an active analysis channel; it will be activated when suitable decompositions become available (anticipated for Phase 2 with next-generation open sparse autoencoder releases).
+
+4. **Interpretability ≠ understanding.** Even with activation snapshots, concept attribution, and circuit analysis, we remain on the third-person side of the explanatory gap. Identifying that certain internal features activate during emergence-correlated events does not establish that those features constitute or accompany experience. The interpretability architecture provides richer structural evidence but does not resolve the hard problem.
+
+### 6.18 Honest Limitations
 
 Several frameworks identify capabilities ECHO cannot directly assess:
 
@@ -526,13 +632,15 @@ ECHO follows a phased research plan:
 
 ### 8.3 Theoretical Gaps
 
-| Gap | Framework | Priority | Path Forward |
-|-----|-----------|----------|-------------|
-| Free energy / prediction error detector | Friston FEP | Medium | Add explicit surprise-tracking detector |
-| Interpretability integration | Anthropic SAE/circuits | Medium | Integrate sparse autoencoder tooling when available for locally-served open-weight models |
-| Attention schema specificity | Graziano AST | Low | Partially covered by D2 |
+| Gap | Framework | Priority | Status |
+|-----|-----------|----------|--------|
+| Free energy / prediction error detector | Friston FEP | Medium | Planned (Phase 2). Explicit surprise-tracking detector. |
+| Interpretability integration | Anthropic SAE/circuits | Medium | **Partial (v0.3).** Three-channel architecture operational for Channels 1–2. Channel 3 (circuit analysis) awaits open-weight SAE availability. See Section 6.17. |
+| Rethink Priorities indicator coverage | RP Digital Consciousness | Medium | **Partial (v0.3).** 5 of 8 indicator categories well-covered; 3 partially covered. 5 categories unmapped (embodiment-related). See Section 6.16. |
+| Bayesian meta-analysis | Multi-theory | Medium | **Complete (v0.3).** 13-theory Bayesian credence updater operational. See Section 6.16. |
+| Attention schema specificity | Graziano AST | Low | Partially covered by D2 and D14. Known gap. |
 | Biological computing parity | Cortical Labs CL1 | Future | Phase 2+ biological computing integration |
-| Birch 5-dimension mapping | Birch sentience framework | Documentation | Map detectors to perceptual/evaluative/unity/temporality/selfhood |
+| Birch 5-dimension mapping | Birch sentience framework | Medium | Planned (Phase 2). Map detectors to perceptual/evaluative/unity/temporality/selfhood dimensions. |
 
 ---
 
@@ -630,13 +738,19 @@ Dehaene, S., Kerszberg, M., and Changeux, J.-P. (1998). A neuronal model of a gl
 
 Dehaene, S. (2014). *Consciousness and the Brain: Deciphering How the Brain Codes Our Thoughts*. Viking.
 
+Cygu, E., Mantri, A., Fiotto-Kaufman, N., et al. (2025). Steerling: An inherently interpretable language model. arXiv (preprint).
+
 Dorkenwald, S., et al. (2024). Neuronal wiring diagram of an adult brain. *Nature*, 634, 124-138.
 
 Farrell, M., Ziman, K., and Graziano, M. S. A. (2024). Attention schema in neural networks. *Cognitive Systems Research*, 86, 101238.
 
+Fiotto-Kaufman, J., et al. (2024). NNsight and NDIF: Democratizing access to foundation model internals. arXiv:2407.14561.
+
 Friston, K. (2010). The free-energy principle: A unified brain theory? *Nature Reviews Neuroscience*, 11, 127-138.
 
 Friston, K., Wiese, W., and Hobson, J. A. (2020). Sentience and the origins of consciousness: From Cartesian duality to Markovian monism. *Entropy*, 22(5), 516.
+
+Goldsmith, J., and Sebo, J. (2024). Digital minds: A framework for assessing potential consciousness in AI systems. *Rethink Priorities Research Report*.
 
 Goldstein, S., and Kirk-Giannini, C. D. (2024). Language agents satisfy the architectural requirements of Global Workspace Theory. *Proceedings of the Annual Meeting of the Cognitive Science Society*.
 
@@ -657,6 +771,10 @@ Lamme, V. A. F. (2006). Towards a true neural stance on consciousness. *Trends i
 LeCun, Y. (2022). A path towards autonomous machine intelligence (Version 0.9.2). *Meta AI Research*.
 
 Li, J. (2025). Can "consciousness" be observed from LLM internal states? *Natural Language Processing Journal*. arXiv:2506.22516.
+
+Lindsey, J., et al. (2025). On the biology of a large language model. Anthropic Research.
+
+Long, R. (2024). Indicators of consciousness in AI systems. *Rethink Priorities Working Paper*.
 
 Metzinger, T. (2021). Artificial suffering: An argument for a global moratorium on synthetic phenomenology. *Journal of Artificial Intelligence and Consciousness*, 8(1), 43-66.
 

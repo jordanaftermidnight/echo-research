@@ -107,5 +107,5 @@ Sustained Interaction + Passive Observation
 
 ---
 
-*Last updated: March 2026 — v0.2*
+*Last updated: April 2026 — v0.3*
 *Implementation details are withheld from this document.*

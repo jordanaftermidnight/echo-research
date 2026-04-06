@@ -4,6 +4,33 @@ All notable milestones and public releases are documented here.
 
 ---
 
+## [0.3.0] — 2026-04-07
+
+### Added
+- Whitepaper v0.3: Bayesian meta-analysis layer (Section 6.16)
+  - 13 theoretical stances with formal Bayesian credence updating
+  - 8 indicator categories mapped from Rethink Priorities digital consciousness framework
+  - No-consciousness null hypothesis as baseline
+  - Explicit documentation of unmapped categories and coverage gaps
+- Whitepaper v0.3: Three-channel interpretability architecture (Section 6.17)
+  - Periodic activation snapshots via transformer instrumentation hooks
+  - Concept attribution via inherently interpretable reference models
+  - Circuit analysis methodology framework (awaiting open-weight SAE availability)
+  - Honest constraints: quantisation barrier, periodic vs continuous, explanatory gap
+- New references: Fiotto-Kaufman et al. (NNsight), Cygu et al. (Steerling), Goldsmith & Sebo (Rethink Priorities), Long (RP indicators), Lindsey et al. (Anthropic circuit tracing)
+
+### Changed
+- Theoretical gaps table updated to reflect partial interpretability and RP integration
+- Abstract expanded to reference meta-analysis and interpretability architecture
+- Status table updated: probing/calibration complete, deployment pending
+
+### Status
+- Detection suite: **18 detectors + Bayesian meta-analysis**
+- Interpretability: **Channels 1–2 operational, Channel 3 pending**
+- First longitudinal session: pending server deployment
+
+---
+
 ## [0.2.0] — 2026-03-16
 
 ### Added

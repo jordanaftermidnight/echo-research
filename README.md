@@ -9,7 +9,7 @@
 ---
 
 [![Status](https://img.shields.io/badge/Status-Pre--publication-blue?style=flat-square)](CHANGELOG.md)
-[![Version](https://img.shields.io/badge/Version-0.2.0-informational?style=flat-square)](whitepaper/)
+[![Version](https://img.shields.io/badge/Version-0.3.0-informational?style=flat-square)](whitepaper/)
 [![License](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey?style=flat-square)](LICENSE)
 
 </div>
@@ -50,7 +50,9 @@ ECHO's role is that of the gardener: prepare the substrate, observe systematical
 ## Core Components
 
 - **18-Detector Suite** — Multi-dimensional convergent emergence detection across statistical, structural, and behavioural dimensions
+- **Bayesian Meta-Analysis** — Posterior credence computation across 13 theoretical stances via Rethink Priorities indicator framework
 - **Active Probing System** — Structured protocols for eliciting responses that stress-test specific cognitive dimensions
+- **Interpretability Architecture** — Three-channel activation analysis: periodic snapshots, concept attribution, circuit methodology
 - **Emotional Development Framework** — Longitudinal tracking of functional affective state analogues
 - **Longitudinal Observation Engine** — Sustained session logging and cross-session signal comparison
 - **Local LLM Environment** — Fully observable, locally-hosted inference with full embedding access
@@ -65,10 +67,13 @@ The ECHO whitepaper is available in [`whitepaper/`](whitepaper/).
 
 - **v0.1** — Original conceptual framework, detection rationale, and methodology
 - **v0.2** — Expanded 18-detector suite, theory-to-detector mappings, convergent detection methodology, and multi-phase research design
+- **v0.3** — Bayesian meta-analysis (Rethink Priorities framework), three-channel interpretability architecture, updated theoretical gap analysis
 
 It covers:
 - Full framework rationale and philosophy
 - Detection suite methodology
+- Bayesian credence computation across 13 consciousness theories
+- Interpretability methods and constraints
 - Relationship to prior work (interpretability, consciousness science, AI welfare)
 - Research roadmap and potential applications
 
@@ -82,9 +87,12 @@ It covers:
 |-----------|--------|
 | Architecture design | ✅ Complete |
 | Detection suite | ✅ 18 detectors implemented |
-| Hardware environment | ✅ Specified & provisioned |
-| Probing library | 🔧 In development |
-| First longitudinal session | 🔧 In preparation |
+| Bayesian meta-analysis | ✅ 13-theory credence updater |
+| Interpretability architecture | ✅ Three-channel design (Channels 1–2 active) |
+| Probing & calibration | ✅ Complete |
+| Hardware environment | ✅ Specified |
+| Server deployment | 🔧 In preparation |
+| First longitudinal session | 🔧 Pending deployment |
 | Public tooling release | 📅 Roadmap |
 
 ---
